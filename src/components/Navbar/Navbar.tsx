@@ -6,8 +6,11 @@ import cartIcon from "../../images/icons/local_shipping.png";
 import MenuBurger from "./MenuBurger";
 import { useState } from "react";
 import MenuLinks from "./MenuLinks";
+import { MyContext } from "../../API/Context";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const context = useContext(MyContext);
   const [openedMenu, setOpenedMenu] = useState(false);
 
   const menuOpenHandler = () => {
@@ -45,7 +48,7 @@ const Navbar = () => {
           <img src={profileIcon} />
         </div>
         <div className="icon">
-          <img src={cartIcon} />
+          <img src={cartIcon} onClick={() => context?.setIsCartActive(true)} />
         </div>
       </div>
     </nav>

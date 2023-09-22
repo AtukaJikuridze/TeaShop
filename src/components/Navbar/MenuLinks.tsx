@@ -3,12 +3,14 @@ import "./MenuLinks.css";
 import searchicon from "../../images/icons/Search.png";
 import profileIcon from "../../images/icons/Person.png";
 import cartIcon from "../../images/icons/local_shipping.png";
-
+import { MyContext } from "../../API/Context";
+import { useContext } from "react";
 interface MenuLinksInterface {
   openedMenu: boolean;
 }
 
 const MenuLinks = ({ openedMenu }: MenuLinksInterface) => {
+  const context = useContext(MyContext);
   return (
     <div
       className="nav-menu__links"
@@ -22,7 +24,11 @@ const MenuLinks = ({ openedMenu }: MenuLinksInterface) => {
           <img src={profileIcon} alt="Profile Icon" />
         </div>
         <div className="icon">
-          <img src={cartIcon} alt="Cart Icon" />
+          <img
+            src={cartIcon}
+            alt="Cart Icon"
+            onClick={() => console.log(true)}
+          />
         </div>
       </div>
       <ul className="links">

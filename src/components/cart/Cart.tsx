@@ -1,15 +1,16 @@
 import "./Cart.css";
 import CartItem from "./CartItem";
+import { MyContext } from "../../API/Context";
+import { useContext } from "react";
 
-interface CartProps {
-  style?: React.CSSProperties;
-  onClose?: () => void;
-}
+const Cart = () => {
+  const context = useContext(MyContext);
+  console.log(context?.isCartActive);
 
-const Cart: React.FC<CartProps> = ({ style, onClose }) => {
   return (
-    <div onClick={onClose} className="cart-container" style={style}>
-      
+    <div
+      className={`cart-container ${context?.isCartActive ? "cart-active" : ""}`}
+    >
       <div
         //this makes sure not to close cart modal on clicking cart
         onClick={(e) => {
@@ -17,7 +18,10 @@ const Cart: React.FC<CartProps> = ({ style, onClose }) => {
         }}
         className="cart-container__cart"
       >
-        <button className="close-button" onClick={onClose}>
+        <button
+          className="close-button"
+          onClick={() => context?.setIsCartActive(false)}
+        >
           X
         </button>
         <div>

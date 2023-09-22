@@ -25,7 +25,14 @@ const CartItem = () => {
       </div>
     </div>
   ));
-  return BagItem ? BagItem.length : <div>Sorry</div>;
+
+  return BagItem?.length ? (
+    BagItem.length
+  ) : (
+    <div className="no-products">
+      <h1>Sorry no products found</h1>
+    </div>
+  );
 };
 
 export default CartItem;
