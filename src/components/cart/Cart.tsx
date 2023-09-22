@@ -24,9 +24,6 @@ const Cart: React.FC<CartProps> = ({ style, onClose }) => {
         </div>
         <div className="items-wrapper">
           <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
         </div>
         <section className="amount-section1">
           <p className="amount-section1__subtotal">

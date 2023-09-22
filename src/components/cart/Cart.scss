@@ -8,12 +8,11 @@
   justify-content: end;
   background: rgba(0, 0, 0, 0);
   display: flex;
-  transform: translateX(100%);
   transition: 0.5s;
   .my-bag {
     font-size: 20px;
   }
-  .close-button{
+  .close-button {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -22,8 +21,8 @@
     background: transparent;
     border: 1px solid transparent;
     &:hover {
-        border: 1px solid black;
-        cursor: pointer;
+      border: 1px solid black;
+      cursor: pointer;
     }
   }
   &__cart {

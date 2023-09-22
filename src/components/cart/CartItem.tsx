@@ -1,16 +1,21 @@
 import "./CartItem.css";
-import img from "../../images/products/tea/tea1.webp";
+import { MyContext } from "../../API/Context";
+import { useContext } from "react";
+import { ProductsAPI } from "../../API/ProductsAPI";
 
 const CartItem = () => {
-  return (
+  const context = useContext(MyContext);
+  const BagItem = context?.bagList.map((element) => (
     <div className="cart-item">
-      <img src={img} />
+      <img src={ProductsAPI[element].img} />
       <div className="cart-item__content">
         <div>
-          <p>Ceylon Ginger Cinnamon</p>
+          <p>{ProductsAPI[element].species}</p>
           <p>Chai Tea / 50g</p>
           <button className="cart-item__content-button">REMOVE</button>
-          <p className="cart-item__content-span">$4.90</p>
+          <p className="cart-item__content-span">
+            ${ProductsAPI[element].price}
+          </p>
         </div>
         <div className="cart-item__content-actions">
           <button className="cart-item__content-actions-button">-</button>
@@ -19,7 +24,8 @@ const CartItem = () => {
         </div>
       </div>
     </div>
-  );
+  ));
+  return BagItem ? BagItem : <div>Sorry</div>;
 };
 
 export default CartItem;

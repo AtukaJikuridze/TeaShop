@@ -8,7 +8,6 @@
   justify-content: end;
   background: rgba(0, 0, 0, 0);
   display: flex;
-  transform: translateX(100%);
   transition: 0.5s;
 }
 .cart-container .my-bag {

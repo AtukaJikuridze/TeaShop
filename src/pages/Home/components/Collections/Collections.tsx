@@ -1,6 +1,6 @@
 import { CollectionsAPI } from "../../../../API/CollectionsAPI";
 import "./Collections.css";
-export default function Collections() {
+export default function HomeCollections() {
   return (
     <section className="collections">
       <h1>Our Collections</h1>

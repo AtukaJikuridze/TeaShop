@@ -12,10 +12,14 @@
   width: 250px;
   height: 350px;
 }
+.item-container__tea:hover .img-wrapper__details {
+  opacity: 1;
+}
 .item-container__tea .img-wrapper {
   position: relative;
 }
 .item-container__tea .img-wrapper__details {
+  opacity: 0;
   position: absolute;
   background: rgba(0, 0, 0, 0.581);
   width: 100%;

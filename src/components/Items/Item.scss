@@ -11,9 +11,15 @@
   &__tea {
     width: 250px;
     height: 350px;
+    &:hover {
+      .img-wrapper__details {
+        opacity: 1;
+      }
+    }
     .img-wrapper {
       position: relative;
       &__details {
+        opacity: 0;
         position: absolute;
         background: rgba(0, 0, 0, 0.581);
         width: 100%;
@@ -24,6 +30,7 @@
         gap: 20px;
         align-items: center;
         justify-content: center;
+
         &-button {
           text-transform: uppercase;
           font-size: 2rem;
@@ -33,6 +40,7 @@
           cursor: pointer;
           color: white;
           width: 150px;
+
           &-details {
             color: white;
             &:hover {

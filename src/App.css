@@ -6,6 +6,10 @@
   transition: 0.2s;
 }
 
+body {
+  margin-top: 80px;
+}
+
 h1 {
   color: #282828;
   font-family: "Prosto One", cursive;
