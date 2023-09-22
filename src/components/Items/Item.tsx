@@ -17,7 +17,6 @@ const Item = () => {
     if (!context?.bagList.includes(index)) {
       context?.setBagList([...context?.bagList, index]);
     }
-    console.log(context?.bagList);
   };
   const items = ProductsAPI.map((e: teas, idx: number) => (
     <div className="item-container__tea" key={idx}>

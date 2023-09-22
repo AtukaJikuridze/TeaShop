@@ -9,6 +9,7 @@ interface CartProps {
 const Cart: React.FC<CartProps> = ({ style, onClose }) => {
   return (
     <div onClick={onClose} className="cart-container" style={style}>
+      
       <div
         //this makes sure not to close cart modal on clicking cart
         onClick={(e) => {

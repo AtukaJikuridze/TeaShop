@@ -1,15 +1,13 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import Cart from "./components/cart/Cart";
-import Collections from "./pages/Collections/Collections";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Cart />
-      <Collections />
+      <Product />
       <Footer />
     </>
   );

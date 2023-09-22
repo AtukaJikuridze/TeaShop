@@ -25,7 +25,7 @@ const CartItem = () => {
       </div>
     </div>
   ));
-  return BagItem ? BagItem : <div>Sorry</div>;
+  return BagItem ? BagItem.length : <div>Sorry</div>;
 };
 
 export default CartItem;
